@@ -35,8 +35,11 @@ single_result_elements = search_result.find_elements(By.CLASS_NAME,"s-widget-con
 
 #We are looping through all the single elements to show what result actually is 
 
-for result in single_result_elements:
-    print(result.text)
+# for result in single_result_elements:
+#     print(result.text)
+
+driver.find_element(By.ID,"nav-cart").send_keys(Keys.RETURN)
+
 
 #refine the print string to just give the results and price!!!
     
