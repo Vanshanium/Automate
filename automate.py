@@ -1,5 +1,7 @@
-#This is the selenium documentation 
+#This is the Resources where I acutually learned selenium from !
 #https://selenium-python.readthedocs.io/navigating.html
+# https://www.youtube.com/watch?v=9_5Wqgni_Xw&list=PLzMcBGfZo4-n40rB1XaJ0ak1bemvlqumQ&index=6
+
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys #This is the class of different keys ex.RETURN
