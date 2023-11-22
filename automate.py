@@ -12,6 +12,9 @@ from datetime import datetime as df
 
 
 #This is the driver object instancated form the chrome() class
+
+this = __name__
+
 driver = webdriver.Chrome()
 
 

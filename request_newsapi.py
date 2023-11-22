@@ -51,7 +51,7 @@ else:
     r = requests.get(url)
 
 
-#
+#Getting the list of dictionaries from a dictionary(Hell yeah its complicated!)
 articles = r.json()['articles']
 
 
