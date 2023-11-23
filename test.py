@@ -75,4 +75,28 @@ print(math_function(4,3,5))
 
 #here is the code !!!
 
+def math_function(a,b,c):
+    print(f"This is the __name__{__name__}")
+    return ((b+c)/a**2)
+
+def decorator(input_function):
+    def wrapper_function(a,b,c):
+        if(a==0):
+            print("Cannot divide by zero!!")
+            return
+        return input_function(a,b,c)
+
+    return wrapper_function
+
+math_function = decorator(math_function)
+
+print(math_function(3,1,2))
+
+#This is equivalent to this syntaxx
+#Here is a video for help!!
+# https://www.youtube.com/watch?v=MYAEv3JoenI
+
+@decorator
+def math_function(a,b,c):
+    return((b+c)/a)
 
