@@ -1,5 +1,5 @@
 from amazon_scrap import search_amazon
-from flipkart_scrap import search_flipkart
 
+json = search_amazon("thomas calculus")
 
-search_flipkart("Pokemon cards")
+print(json['product_list'])
