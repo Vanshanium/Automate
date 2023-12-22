@@ -100,3 +100,23 @@ print(math_function(3,1,2))
 def math_function(a,b,c):
     return((b+c)/a)
 
+
+#List(arrays),sets,tuples
+#list is mutable, it can change.
+#sets are like math sets
+#tuples are immutable, they can't be chnaged.
+
+string = 'mybrainisinmycolon'
+
+list = [string]
+set = set(string)
+tuple = tuple(string)
+
+print("This is the list",list)
+print("This is the set",set)
+print("This is the tuple",tuple)
+
+# https://www.youtube.com/watch?app=desktop&v=KAXvMbD1Zac
+
+#string Indexing and slicing 
+

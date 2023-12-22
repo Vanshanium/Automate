@@ -2,7 +2,7 @@ import requests
 
 """
 Parameters - It takes in a search_string(The thing you wanna search)
-Return - It returns the json file with all the results along with prices and ratings!!!!
+Return - It returns the json file with all the results along with prices and links!!!!
 """
 
 def search_flipkart(search_string):
