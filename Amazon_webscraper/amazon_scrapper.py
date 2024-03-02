@@ -3,6 +3,8 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from helper_functions import string_lizol 
 
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as ec
 
 
 """
@@ -16,12 +18,21 @@ parameter -
 return - 0 if fails and 1 if it works
 """
 
+
 def result_discombobulator(url,search_string,driver,product_list,page_searched):
     
+
     driver.get(url) 
     #This calls the url in the chrome driver!!!
+
+    try:
+        search_results = WebDriverWait(driver,10).until(
+            ec.presence_of_all_elements_located((By.CLASS_NAME,"s-widget-container")))
     
-    search_results = driver.find_elements(By.CLASS_NAME,"s-widget-container")
+    except TimeoutError:
+        print("Page didn't loaded Correctly Please try again.")
+
+    # search_results = driver.find_elements(By.CLASS_NAME,"s-widget-container")
     #This is a html element searched from the class
 
     search_index = 0
@@ -114,6 +125,8 @@ def search_amazon(search_string):
    
     url = f"https://amazon.in/s?k={search_string}"
 
+    print(url)
+
     driver = webdriver.Chrome()
 
     product_list = []
@@ -124,7 +137,7 @@ def search_amazon(search_string):
                     'product_list':product_list
                     }
     
-    with open("/home/vansha/Desktop/spare_folder/amazon.json","w") as file:
+    with open("results.json","w") as file:
         file.write(str(product_json))
 
     return product_json
