@@ -5,9 +5,8 @@
 # https://mannhowie.com/rest-api
 # https://www.youtube.com/watch?v=ZveW4_ZJtVY&t=489s
 
-
-
 # https://en.limetorrent-official.site/movies?keyword=due+date //for my torrenting!!!
+# I wannt to make a torrent scrapper fr....they are very hard to find nowadays.
 
 
 
@@ -29,7 +28,7 @@ else:
 
 
 
-if(input("Do You want Top Headlines or a Specific Topic(s)")=='t'):
+if(input("Do You want Top Headlines(t) or a Specific Topic(s)")=='t'):
     
     url = f"{url}top-headlines?"
 
@@ -64,4 +63,5 @@ for article in articles:
 
 input_index = input("Which article would you like to read!!!")
 
-print(article[input_index]['title'])
+
+print(articles[int(input_index)]['title']," - ",articles[int(input_index)]['description'],"Read More form here - ",articles[int(input_index)]['url'])
